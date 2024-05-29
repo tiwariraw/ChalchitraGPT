@@ -1,10 +1,15 @@
+import Body from "./components/Body";
+import store from "./utils/store";
+import { Provider } from "react-redux";
 import "./index.css";
 
 function App() {
   return (
-    <div className="App text-red-600 text-3xl">
-      <h1>App component</h1>
-    </div>
+    <Provider store={store}>
+      <div className="App font-space-grotesk">
+        <Body />
+      </div>
+    </Provider>
   );
 }
 
